@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import {
     AppBar,
     Toolbar,
@@ -30,8 +29,8 @@ import avatar from '../images/avatar.png';
 const useStyles = makeStyles(theme => ({
     menuSliderContainer: {
         width: 250,
-        background: "#2A2B2F",
-        height: "100%"
+        background: theme.palette.secondary.main,
+        height: "100vh"
     },
     avatar: {
         display: "block",
@@ -40,7 +39,7 @@ const useStyles = makeStyles(theme => ({
         height: theme.spacing(13)
     },
     listItem: {
-        color: "#DEAFB6"
+        color: theme.palette.secondary.contrastText
     },
     brandText: {
         fontFamily: "'Permanent Marker', sans-serif"
