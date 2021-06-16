@@ -1,8 +1,10 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from './components/NavBar';
-import About from './components/pages/About';
+import Home from './components/pages/Home';
+import Footer from './components/Footer';
 import './App.css';
 
 const defaultFont = "'Montserrat', sans-serif";
@@ -40,7 +42,10 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <NavBar />
-        <About />
+        <Router>
+          <Route path='/' component={Home} />
+        </Router>
+        <Footer />
       </ThemeProvider>
     </div>
   );
