@@ -1,6 +1,6 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -37,17 +37,29 @@ const theme = createMuiTheme({
   }
 })
 
+const useStyles = makeStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+    width: '100vw'
+  },
+})
+
 
 function App() {
+  const classes = useStyles()
   return (
     <div>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <NavBar />
-        <Router>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/projects' component={Projects} />
-        </Router>
+        <div className={classes.root}>
+          <NavBar />
+          <Router>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/projects' component={Projects} />
+          </Router>
+        </div>
         <Footer />
       </ThemeProvider>
     </div>

@@ -3,14 +3,9 @@ import { CssBaseline, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-  },
   footer: {
     padding: theme.spacing(3, 2),
-    marginTop: 'auto',
+    marginTop: '2rem',
     backgroundColor: theme.palette.secondary.main
   },
   footerText: {
@@ -22,7 +17,7 @@ export default function StickyFooter() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
       <CssBaseline />
       <footer className={classes.footer}>
         <Container maxWidth="sm">
