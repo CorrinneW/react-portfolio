@@ -22,7 +22,7 @@ const theme = createMuiTheme({
     },
     lightAccent: {
       main: '#D4B80E',
-      contrastText: '#8A533F'
+      contrastText: '#2A2B2F'
     },
     darkAccent: {
       main: '#8A533F',
