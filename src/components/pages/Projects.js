@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '../Container';
@@ -62,14 +62,6 @@ const projectData = [
 function Projects() {
     const classes = useStyles()
 
-    const[projectState, setProjectState] = useState({
-        image: "",
-        title: "",
-        desc: "",
-        github: "",
-        live: ""
-    })
-
     return (
         <div className={classes.centerText}>
             <Grid
@@ -87,6 +79,17 @@ function Projects() {
                     </Container>
                 </Grid>
                 {/* for each project, build a project card with image, title, desc and links */}
+                {projectData.map(project => (
+                    <Grid item xs={6} lg={4} key={project.title}>
+                        <ProjectCard 
+                            title={project.title}
+                            desc={project.desc}
+                            image={project.image}
+                            github={project.github}
+                            live={project.live}
+                        />
+                    </Grid>
+                ))}
             </Grid>
         </div>
     )
