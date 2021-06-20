@@ -11,12 +11,21 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 'auto',
-    minHeight: '60vh',
-    margin: theme.spacing(2)
+    minHeight: '45vh',
+    margin: theme.spacing(1),
+    borderRadius: '1rem'
   },
   cardImg: {
+    float: "inherit",
     padding: theme.spacing(2),
-    borderRadius: '100%'
+    height: '20rem',
+    filter: "drop-shadow(0 0.75rem 0.75rem #AD72A8)"
+  },
+  cardTitle: {
+    fontFamily: "'Staatliches', sans-serif"
+  },
+  descText: {
+    height: '5vh'
   }
 }));
 
@@ -26,19 +35,12 @@ function ProjectCard(props) {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.cardImg}
-          component="img"
-          alt={props.title}
-          height="140"
-          image={props.image}
-          title={props.title}
-        />
+        <img className={classes.cardImg} src={props.image} alt={props.title} />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography className={classes.cardTitle} gutterBottom variant="h5" component="h2">
             {props.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography className={classes.descText} variant="body2" color="textSecondary" component="p">
             {props.desc}
           </Typography>
         </CardContent>
