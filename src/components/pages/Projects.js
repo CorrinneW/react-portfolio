@@ -2,19 +2,11 @@ import React from 'react';
 import {
     Grid,
     Typography,
-    BottomNavigation,
-    BottomNavigationAction
 } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '../Container';
 import ProjectCard from '../ProjectCard';
-
-//import social icons
-import {
-    GitHub,
-    LinkedIn,
-    Twitter
-} from '@material-ui/icons'
+import SocialLinks from '../SocialLinks'
 
 //image imports
 import EDImg from '../../images/employee_directory_screenshot.png';
@@ -34,16 +26,6 @@ const useStyles = makeStyles(theme => ({
     },
     pText: {
         fontWeight: 'bold'
-    },
-    bottomNav: {
-        margin: theme.spacing(2),
-        background: 'transparent',
-    },
-    socialIcon: {
-        color: theme.palette.secondary.main,
-        '&:hover, active': {
-            color: theme.palette.primary.main
-        }
     }
 }));
 
@@ -131,11 +113,7 @@ function Projects() {
                         <Typography className={classes.pText} variant="p">
                             I'm currently enrolled in a full stack web development bootcamp and gaining new skills every week. Check back often to see my newest projects, or follow me on social media!
                         </Typography>
-                        <BottomNavigation className={classes.bottomNav} showLabels>
-                            <BottomNavigationAction className={classes.socialIcon} label="GitHub" icon={<GitHub />} href="https://github.com/CorrinneW" />
-                            <BottomNavigationAction className={classes.socialIcon} label="LinkedIn" icon={<LinkedIn />} href="https://www.linkedin.com/in/corrinne-worden/" />
-                            <BottomNavigationAction className={classes.socialIcon} label="Twitter" icon={<Twitter />} href="https://twitter.com/corrinne_worden" />
-                        </BottomNavigation>
+                        <SocialLinks />
                     </Container>
                 </Grid>
             </Grid>

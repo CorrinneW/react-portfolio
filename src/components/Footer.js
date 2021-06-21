@@ -6,7 +6,8 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: '2rem',
-    backgroundColor: theme.palette.secondary.main
+    backgroundColor: theme.palette.secondary.main,
+    textAlign: 'center'
   },
   footerText: {
     color: theme.palette.secondary.contrastText

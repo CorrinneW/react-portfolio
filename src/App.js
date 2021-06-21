@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
+import Contact from './components/pages/Contact';
 import './App.css';
 
 const defaultFont = "'Montserrat', sans-serif";
@@ -58,6 +59,7 @@ function App() {
           <Router>
             <Route exact path='/' component={Home} />
             <Route exact path='/projects' component={Projects} />
+            <Route exact path='/contact' component={Contact} />
           </Router>
         </div>
         <Footer />
