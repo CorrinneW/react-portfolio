@@ -6,6 +6,7 @@ import {
     Typography,
 } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+import resumePDF from './corrinne_worden_resume_plain_text.pdf'
 
 const useStyles = makeStyles(theme => ({
     centerText: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 function Resume() {
     const classes = useStyles()
 
-    const file = "https://docs.google.com/document/d/e/2PACX-1vQo5aTeZzZO7Co9MpOTUDRnbQKZGOD08hIMIqH4zeGbB76rVdYERPmWTO7zMQIdmWLoWsBCWWETVPMN/pub"
+    const file = resumePDF
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
 

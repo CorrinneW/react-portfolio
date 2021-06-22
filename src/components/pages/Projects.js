@@ -111,7 +111,7 @@ function Projects() {
                             More to Come!
                         </Typography>
                         <Typography className={classes.pText} variant="p">
-                            I'm currently enrolled in a full stack web development bootcamp and gaining new skills every week. Check back often to see my newest projects, or follow me on social media!
+                            I'm currently enrolled in a full stack web development bootcamp and gaining new skills every week.{<br/>} Check back often to see my newest projects, or follow me on social media!
                         </Typography>
                         <SocialLinks />
                     </Container>
