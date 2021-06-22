@@ -25,6 +25,8 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import avatar from '../images/avatar.png';
 
+import { Link } from 'react-router-dom';
+
 //css styles
 const useStyles = makeStyles(theme => ({
     menuSliderContainer: {
@@ -49,19 +51,23 @@ const useStyles = makeStyles(theme => ({
 const menuItems = [
     {
         listIcon: <Home />,
-        listText: "Home"
+        listText: "Home",
+        pathname: "/home"
     },
     {
         listIcon: <AssignmentInd />,
-        listText: "Resume"
+        listText: "Resume",
+        pathname: "/resume"
     },
     {
         listIcon: <Apps />,
-        listText: "Projects"
+        listText: "Projects",
+        pathname: "/projects"
     },
     {
         listIcon: <ContactMail />,
-        listText: "Contact"
+        listText: "Contact",
+        pathname: "/contact"
     },
 ]
 
@@ -95,10 +101,12 @@ function NavBar() {
                                     {menuItems.map((lsItem, key) => {
                                         return (
                                             <ListItem button key={key} onClick={toggleSlider("right", false)}>
-                                                <ListItemIcon className={classes.listItem}>
-                                                    {lsItem.listIcon}
-                                                </ListItemIcon>
-                                                <ListItemText className={classes.listItem} primary={lsItem.listText} />
+                                                <Link to={lsItem.pathname} replace>
+                                                    <ListItemIcon className={classes.listItem}>
+                                                        {lsItem.listIcon}
+                                                    </ListItemIcon>
+                                                    <ListItemText className={classes.listItem} primary={lsItem.listText} />
+                                                </Link>
                                             </ListItem>
                                         )
                                     })}

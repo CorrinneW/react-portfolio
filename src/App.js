@@ -1,11 +1,12 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
+import Resume from './components/pages/Resume';
 import Contact from './components/pages/Contact';
 import './App.css';
 
@@ -56,11 +57,12 @@ function App() {
         <CssBaseline />
         <div className={classes.root}>
           <NavBar />
-          <Router>
+          <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/projects' component={Projects} />
+            <Route exact path='/resume' component={Resume} />
             <Route exact path='/contact' component={Contact} />
-          </Router>
+          </Switch>
         </div>
         <Footer />
       </ThemeProvider>
