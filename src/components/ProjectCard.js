@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
     filter: "drop-shadow(0 0.75rem 0.75rem #AD72A8)"
   },
   cardTitle: {
-    fontFamily: "'Staatliches', sans-serif"
+    fontFamily: "'Staatliches', sans-serif",
+    color: theme.palette.darkAccent.main
   },
   descText: {
     height: '5vh'
