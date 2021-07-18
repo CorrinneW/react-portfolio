@@ -7,6 +7,7 @@ import {
 } from '@material-ui/core'
 
 import Container from '../Container'
+import SkillsList from '../SkillsList';
 
 import resumePDF from '../../assets/corrinne_worden_resume_plain_text.pdf';
 
@@ -133,7 +134,7 @@ const useStyles = makeStyles(theme => ({
 
 //open resumePDF in new window so that it can be downloaded or printed
 function handleClick() {
- window.open(resumePDF, '_blank');
+    window.open(resumePDF, '_blank');
 }
 
 function Resume() {
@@ -179,6 +180,10 @@ function Resume() {
                             Responsible for the creation, editing and maintenance of Direct Mail Marketing and HTML email campaigns.
                         </Typography>
                     </Box>
+                </Box>
+                <Box component="div">
+                    <Typography variant="h2" className={classes.year}>Skills</Typography>
+                    <SkillsList />
                 </Box>
             </Container>
         </>

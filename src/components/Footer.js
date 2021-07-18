@@ -23,7 +23,7 @@ export default function StickyFooter() {
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="body1" className={classes.footerText}>
-            &copy; 2020 Corrinne M Worden
+            &copy; 2021 Corrinne M Worden
           </Typography>
         </Container>
       </footer>
